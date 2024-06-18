@@ -166,7 +166,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Comparacao/" data-id="clxjwz1k00002iss752t720qd" data-title="Comparação de eficiência dos algoritmos" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Comparacao/" data-id="clxjx7pa30000vcs7hyime3ag" data-title="Comparação de eficiência dos algoritmos" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -211,7 +211,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Merge/" data-id="clxjwz1k10003iss7dbdxfovz" data-title="Merge Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Merge/" data-id="clxjx7pa60001vcs7ck5jd2ew" data-title="Merge Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -256,49 +256,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Sort/" data-id="clxjwz1k20005iss7bjs371nr" data-title="Bubble Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
-      
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-
-  
-    <article id="post-Binario" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
-  <div class="article-meta">
-    <a href="/repositorioCalculo/2024/06/16/Binario/" class="article-date">
-  <time class="dt-published" datetime="2024-06-17T02:47:16.000Z" itemprop="datePublished">2024-06-16</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="p-name article-title" href="/repositorioCalculo/2024/06/16/Binario/">Busca Binária</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="e-content article-entry" itemprop="articleBody">
-      
-        <h3 id="Algoritmo-Busca-Binaria"><a href="#Algoritmo-Busca-Binaria" class="headerlink" title="Algoritmo Busca Binária"></a>Algoritmo Busca Binária</h3><p>A busca binária é um algoritmo que funciona para encontrar um elemento em um array ordenado. Ele compara o elemento buscado com o elemento do meio do array e, dependendo da comparação, continua a busca na metade esquerda ou direita do array, reduzindo o intervalo de busca pela metade a cada iteração até localizar.</p>
-<p>Em ordem, o algoritmo segue os seguintes passos:</p>
-<p><strong>1.</strong> Inicia os limites de intervalos da busca.<br><strong>2.</strong> Enquanto o intervalo não estiver vazio, calcula o elemento do meio do array comparando-o com o elemento buscado, ajustando os limites de busca.<br><strong>3.</strong> Retorna o índice do elemento caso for encontrado, senão indica que o elemento é inexistente no array.</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">busca_binaria</span>(<span class="params">arr, alvo</span>):</span><br><span class="line">    esquerda, direita = <span class="number">0</span>, <span class="built_in">len</span>(arr) - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> esquerda &lt;= direita:</span><br><span class="line">        meio = (esquerda + direita) // <span class="number">2</span></span><br><span class="line">        <span class="comment"># Verifica se o alvo está no meio do array</span></span><br><span class="line">        <span class="keyword">if</span> arr[meio] == alvo:</span><br><span class="line">            <span class="keyword">return</span> meio</span><br><span class="line">        <span class="comment"># Se o alvo for menor que o elemento do meio, busca na metade esquerda do array</span></span><br><span class="line">        <span class="keyword">elif</span> arr[meio] &gt; alvo:</span><br><span class="line">            direita = meio - <span class="number">1</span></span><br><span class="line">        <span class="comment"># Se o alvo for maior que o elemento do meio, busca na metade direita do array</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            esquerda = meio + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Retorna -1 se o elemento não for encontrado</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Exemplo de uso</span></span><br><span class="line">arr = [<span class="number">5</span>, <span class="number">13</span>, <span class="number">22</span>, <span class="number">37</span>, <span class="number">50</span>, <span class="number">64</span>, <span class="number">78</span>, <span class="number">89</span>, <span class="number">99</span>]</span><br><span class="line">alvo = <span class="number">37</span></span><br><span class="line">resultado = busca_binaria(arr, alvo)</span><br><span class="line"><span class="keyword">if</span> resultado != -<span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Elemento encontrado no índice:&quot;</span>, resultado)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Elemento não encontrado no array.&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/Binario/" data-id="clxjwz1jw0000iss7b97nfgg4" data-title="Busca Binária" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Sort/" data-id="clxjx7pa90006vcs78rklgkpv" data-title="Bubble Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -343,7 +301,49 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/Insertion/" data-id="clxjwz1jz0001iss796av8q2c" data-title="Insertion Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/Insertion/" data-id="clxjx7pa70002vcs7f9w182s6" data-title="Insertion Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Binario" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/repositorioCalculo/2024/06/16/Binario/" class="article-date">
+  <time class="dt-published" datetime="2024-06-17T02:47:16.000Z" itemprop="datePublished">2024-06-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/repositorioCalculo/2024/06/16/Binario/">Busca Binária</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Algoritmo-Busca-Binaria"><a href="#Algoritmo-Busca-Binaria" class="headerlink" title="Algoritmo Busca Binária"></a>Algoritmo Busca Binária</h3><p>A busca binária é um algoritmo que funciona para encontrar um elemento em um array ordenado. Ele compara o elemento buscado com o elemento do meio do array e, dependendo da comparação, continua a busca na metade esquerda ou direita do array, reduzindo o intervalo de busca pela metade a cada iteração até localizar.</p>
+<p>Em ordem, o algoritmo segue os seguintes passos:</p>
+<p><strong>1.</strong> Inicia os limites de intervalos da busca.<br><strong>2.</strong> Enquanto o intervalo não estiver vazio, calcula o elemento do meio do array comparando-o com o elemento buscado, ajustando os limites de busca.<br><strong>3.</strong> Retorna o índice do elemento caso for encontrado, senão indica que o elemento é inexistente no array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">busca_binaria</span>(<span class="params">arr, alvo</span>):</span><br><span class="line">    esquerda, direita = <span class="number">0</span>, <span class="built_in">len</span>(arr) - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> esquerda &lt;= direita:</span><br><span class="line">        meio = (esquerda + direita) // <span class="number">2</span></span><br><span class="line">        <span class="comment"># Verifica se o alvo está no meio do array</span></span><br><span class="line">        <span class="keyword">if</span> arr[meio] == alvo:</span><br><span class="line">            <span class="keyword">return</span> meio</span><br><span class="line">        <span class="comment"># Se o alvo for menor que o elemento do meio, busca na metade esquerda do array</span></span><br><span class="line">        <span class="keyword">elif</span> arr[meio] &gt; alvo:</span><br><span class="line">            direita = meio - <span class="number">1</span></span><br><span class="line">        <span class="comment"># Se o alvo for maior que o elemento do meio, busca na metade direita do array</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            esquerda = meio + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Retorna -1 se o elemento não for encontrado</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Exemplo de uso</span></span><br><span class="line">arr = [<span class="number">5</span>, <span class="number">13</span>, <span class="number">22</span>, <span class="number">37</span>, <span class="number">50</span>, <span class="number">64</span>, <span class="number">78</span>, <span class="number">89</span>, <span class="number">99</span>]</span><br><span class="line">alvo = <span class="number">37</span></span><br><span class="line">resultado = busca_binaria(arr, alvo)</span><br><span class="line"><span class="keyword">if</span> resultado != -<span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Elemento encontrado no índice:&quot;</span>, resultado)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Elemento não encontrado no array.&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/Binario/" data-id="clxjx7pa80003vcs7hkrw4zit" data-title="Busca Binária" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -388,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/My-New-Post/" data-id="clxjwz1k10004iss7cgbgeav8" data-title="Selection Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/My-New-Post/" data-id="clxjx7pa90004vcs745nyblwa" data-title="Selection Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -439,7 +439,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/05/14/hello-world/" data-id="clxjwz1k20006iss7fjojh950" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/05/14/hello-world/" data-id="clxjx7pa90005vcs754gc7m18" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -494,11 +494,11 @@
           </li>
         
           <li>
-            <a href="/repositorioCalculo/2024/06/16/Binario/">Busca Binária</a>
+            <a href="/repositorioCalculo/2024/06/16/Insertion/">Insertion Sort</a>
           </li>
         
           <li>
-            <a href="/repositorioCalculo/2024/06/16/Insertion/">Insertion Sort</a>
+            <a href="/repositorioCalculo/2024/06/16/Binario/">Busca Binária</a>
           </li>
         
       </ul>
