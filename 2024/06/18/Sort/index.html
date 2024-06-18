@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Bubble Sort | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Algoritmo Bubble SortO Bubble Sort é um algoritmo de ordenação simples que funciona percorrendo repetidamente a lista a ser ordenada, comparando os pares de elementos adjacentes, trocando a posição se">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Bubble Sort">
+<meta property="og:url" content="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Sort/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Algoritmo Bubble SortO Bubble Sort é um algoritmo de ordenação simples que funciona percorrendo repetidamente a lista a ser ordenada, comparando os pares de elementos adjacentes, trocando a posição se">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-06-18T03:14:13.000Z">
+<meta property="article:modified_time" content="2024-06-18T03:22:57.922Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/repositorioCalculo/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/repositorioCalculo/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/repositorioCalculo/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/repositorioCalculo/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/repositorioCalculo/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/repositorioCalculo/">Home</a>
+        
+          <a class="main-nav-link" href="/repositorioCalculo/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/repositorioCalculo/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://fabrizioborghesi.github.io/repositorioCalculo"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Sort" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/repositorioCalculo/2024/06/18/Sort/" class="article-date">
+  <time class="dt-published" datetime="2024-06-18T03:14:13.000Z" itemprop="datePublished">2024-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Bubble Sort
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Algoritmo-Bubble-Sort"><a href="#Algoritmo-Bubble-Sort" class="headerlink" title="Algoritmo Bubble Sort"></a>Algoritmo Bubble Sort</h3><p>O Bubble Sort é um algoritmo de ordenação simples que funciona percorrendo repetidamente a lista a ser ordenada, comparando os pares de elementos adjacentes, trocando a posição se estiverem na ordem errada. O processo se repete até que nenhuma troca seja mais necessária, indicando que a lista está ordenada.</p>
+<p>Em ordem, o algoritmo segue os seguintes passos:</p>
+<p><strong>1.</strong> Percorre por toda lista.<br><strong>2.</strong> Compara os elementos adjacentes, trocando-os caso estejam na ordem errada.<br><strong>3.</strong> Realiza uma repetição até que todos os elementos estejam na ordem correta.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bubble_sort</span>(<span class="params">arr</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        swapped = <span class="literal">False</span></span><br><span class="line">        <span class="comment"># Realize uma passagem pelo array</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n-i-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> arr[j] &gt; arr[j+<span class="number">1</span>]:</span><br><span class="line">                <span class="comment"># Troca se os elementos estiverem na ordem errada</span></span><br><span class="line">                arr[j], arr[j+<span class="number">1</span>] = arr[j+<span class="number">1</span>], arr[j]</span><br><span class="line">                swapped = <span class="literal">True</span></span><br><span class="line">        <span class="comment"># Se não houve trocas, significa que a lista está ordenada</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> swapped:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># Gera um array aleatório com números entre 1 e 1000</span></span><br><span class="line">    arr = [random.randint(<span class="number">1</span>, <span class="number">1000</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)]</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array original:&quot;</span>, arr)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Mede o tempo de execução do Bubble Sort</span></span><br><span class="line">    start_time = time.time()</span><br><span class="line">    sorted_arr = bubble_sort(arr)</span><br><span class="line">    end_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, sorted_arr)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tempo de execução: &#123;:.6f&#125; segundos&quot;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br></pre></td></tr></table></figure>
+
+<p> <strong>Desempenho do algoritmo em diferentes cenários:</strong></p>
+<p> O link segue para os testes realizados com bubble sort em 𝑂(n²).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Sort/" data-id="clxjwz1k20005iss7bjs371nr" data-title="Bubble Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/repositorioCalculo/2024/06/18/Merge/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Merge Sort
+        
+      </div>
+    </a>
+  
+  
+    <a href="/repositorioCalculo/2024/06/16/Binario/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Busca Binária</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/repositorioCalculo/archives/2024/06/">June 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/repositorioCalculo/archives/2024/05/">May 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/18/Comparacao/">Comparação de eficiência dos algoritmos</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/18/Merge/">Merge Sort</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/18/Sort/">Bubble Sort</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/16/Binario/">Busca Binária</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/16/Insertion/">Insertion Sort</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/repositorioCalculo/" class="mobile-nav-link">Home</a>
+  
+    <a href="/repositorioCalculo/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/repositorioCalculo/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/repositorioCalculo/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/repositorioCalculo/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

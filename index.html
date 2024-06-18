@@ -69,6 +69,292 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Comparacao" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/repositorioCalculo/2024/06/18/Comparacao/" class="article-date">
+  <time class="dt-published" datetime="2024-06-18T04:15:28.000Z" itemprop="datePublished">2024-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/repositorioCalculo/2024/06/18/Comparacao/">Comparação de eficiência dos algoritmos</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>Aqui uma tabela de comparação onde foram testados arrays (100, 300, 400, 500, 700, 800, 900, 1000) e seus tempos de execução <strong>em segundos</strong> registrados.</p>
+<h3 id="Tempo-de-Execucao"><a href="#Tempo-de-Execucao" class="headerlink" title="Tempo de Execução"></a>Tempo de Execução</h3><table>
+<thead>
+<tr>
+<th>Array Size</th>
+<th>Bubble Sort (s)</th>
+<th>Insertion Sort (s)</th>
+<th>Merge Sort (s)</th>
+<th>Selection Sort (s)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>100</td>
+<td>0.000441</td>
+<td>0.000177</td>
+<td>0.000160</td>
+<td>0.000235</td>
+</tr>
+<tr>
+<td>300</td>
+<td>0.003947</td>
+<td>0.001782</td>
+<td>0.000521</td>
+<td>0.001820</td>
+</tr>
+<tr>
+<td>400</td>
+<td>0.006421</td>
+<td>0.003062</td>
+<td>0.000664</td>
+<td>0.003653</td>
+</tr>
+<tr>
+<td>500</td>
+<td>0.010653</td>
+<td>0.004500</td>
+<td>0.000829</td>
+<td>0.005612</td>
+</tr>
+<tr>
+<td>700</td>
+<td>0.025110</td>
+<td>0.011545</td>
+<td>0.002682</td>
+<td>0.013941</td>
+</tr>
+<tr>
+<td>800</td>
+<td>0.030885</td>
+<td>0.016891</td>
+<td>0.009645</td>
+<td>0.013905</td>
+</tr>
+<tr>
+<td>900</td>
+<td>0.042929</td>
+<td>0.016464</td>
+<td>0.001894</td>
+<td>0.021994</td>
+</tr>
+<tr>
+<td>1000</td>
+<td>0.068118</td>
+<td>0.020569</td>
+<td>0.001963</td>
+<td>0.025375</td>
+</tr>
+</tbody></table>
+<h3 id="Sobre-a-eficiencia"><a href="#Sobre-a-eficiencia" class="headerlink" title="Sobre a eficiência"></a>Sobre a eficiência</h3><p><strong>Bubble Sort.</strong> O tempo cresce a medida que os arrys crescem, então para grandes arrays não é muito viável.<br><strong>Selection Sort.</strong> Segue a mesma lógica que o Bubble Sort, mesmos endo um pouco melhor.<br><strong>Insertion Sort.</strong> Possui o melhor desempenho de listas parcialmente ordenadas, mas continua sendo ineficiente para listas grandes ordenadas.<br><strong>Merge Sort.</strong> Mais eficiente sendo ideal para grandes conjuntos de dados.</p>
+<h3 id="Conclusao"><a href="#Conclusao" class="headerlink" title="Conclusão"></a>Conclusão</h3><p>Bubble Sort e Selection Sort são ótimas opções para listas muito pequenas por serem ineficientes quando se trata de listas muito grandes. Porém, para listas pequenas ou quase ordenadas é uma ótima opção, enquanto a Merge Sort é a escolha ideal para grandes listas ou desordenadas.</p>
+<p>Para ver detalhes dos gráficos, aqui está o link para consultar as planilhas.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Comparacao/" data-id="clxjwz1k00002iss752t720qd" data-title="Comparação de eficiência dos algoritmos" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Merge" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/repositorioCalculo/2024/06/18/Merge/" class="article-date">
+  <time class="dt-published" datetime="2024-06-18T03:14:13.000Z" itemprop="datePublished">2024-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/repositorioCalculo/2024/06/18/Merge/">Merge Sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Algoritmo-Merge-Sort"><a href="#Algoritmo-Merge-Sort" class="headerlink" title="Algoritmo Merge Sort"></a>Algoritmo Merge Sort</h3><p>O Merge Sort é um algoritmo de ordenação eficiente, baseado na técnica de divisão e conquista. Isso é, sua abordagem recursiva ordena os dados separando-os em duas metades, ordenando cada uma recursivamente e depois mesclando as 2 partes para ordená-las e produzir o array final ordenado.</p>
+<p>Em ordem, o algoritmo segue os seguintes passos:</p>
+<p><strong>1.</strong> Divide todo o array em 2 metades.<br><strong>2.</strong> Ordena cada metade recursivamente.<br><strong>3.</strong> Mescla as 2 metades para produzir o array final.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">merge_sort</span>(<span class="params">arr</span>):</span><br><span class="line">    <span class="keyword">if</span> <span class="built_in">len</span>(arr) &gt; <span class="number">1</span>:</span><br><span class="line">        mid = <span class="built_in">len</span>(arr) // <span class="number">2</span>  <span class="comment"># Divide o array ao meio</span></span><br><span class="line">        left_half = arr[:mid]</span><br><span class="line">        right_half = arr[mid:]</span><br><span class="line"></span><br><span class="line">        merge_sort(left_half)  <span class="comment"># Ordena a metade esquerda recursivamente</span></span><br><span class="line">        merge_sort(right_half)  <span class="comment"># Ordena a metade direita recursivamente</span></span><br><span class="line"></span><br><span class="line">        i = j = k = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Mescla as duas metades ordenadas em um único array ordenado</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(left_half) <span class="keyword">and</span> j &lt; <span class="built_in">len</span>(right_half):</span><br><span class="line">            <span class="keyword">if</span> left_half[i] &lt; right_half[j]:</span><br><span class="line">                arr[k] = left_half[i]</span><br><span class="line">                i += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                arr[k] = right_half[j]</span><br><span class="line">                j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Copia os elementos restantes de left_half</span></span><br><span class="line">        <span class="keyword">while</span> i &lt; <span class="built_in">len</span>(left_half):</span><br><span class="line">            arr[k] = left_half[i]</span><br><span class="line">            i += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">        <span class="comment"># Copia os elementos restantes de right_half</span></span><br><span class="line">        <span class="keyword">while</span> j &lt; <span class="built_in">len</span>(right_half):</span><br><span class="line">            arr[k] = right_half[j]</span><br><span class="line">            j += <span class="number">1</span></span><br><span class="line">            k += <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># Gera um array aleatório com números entre 1 e 1000</span></span><br><span class="line">    arr = [random.randint(<span class="number">1</span>, <span class="number">1000</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)]</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array original:&quot;</span>, arr)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Mede o tempo de execução do Merge Sort</span></span><br><span class="line">    start_time = time.time()</span><br><span class="line">    sorted_arr = merge_sort(arr)</span><br><span class="line">    end_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, sorted_arr)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tempo de execução: &#123;:.6f&#125; segundos&quot;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p> <strong>Desempenho do algoritmo em diferentes cenários:</strong></p>
+<p>A planilha apresenta os diferentes testes realizados.<br>O Merge Sort tem uma complexidade de tempo de 𝑂(𝑛 log 𝑛) em todos os casos.</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Merge/" data-id="clxjwz1k10003iss7dbdxfovz" data-title="Merge Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Sort" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/repositorioCalculo/2024/06/18/Sort/" class="article-date">
+  <time class="dt-published" datetime="2024-06-18T03:14:13.000Z" itemprop="datePublished">2024-06-18</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/repositorioCalculo/2024/06/18/Sort/">Bubble Sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Algoritmo-Bubble-Sort"><a href="#Algoritmo-Bubble-Sort" class="headerlink" title="Algoritmo Bubble Sort"></a>Algoritmo Bubble Sort</h3><p>O Bubble Sort é um algoritmo de ordenação simples que funciona percorrendo repetidamente a lista a ser ordenada, comparando os pares de elementos adjacentes, trocando a posição se estiverem na ordem errada. O processo se repete até que nenhuma troca seja mais necessária, indicando que a lista está ordenada.</p>
+<p>Em ordem, o algoritmo segue os seguintes passos:</p>
+<p><strong>1.</strong> Percorre por toda lista.<br><strong>2.</strong> Compara os elementos adjacentes, trocando-os caso estejam na ordem errada.<br><strong>3.</strong> Realiza uma repetição até que todos os elementos estejam na ordem correta.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">bubble_sort</span>(<span class="params">arr</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        swapped = <span class="literal">False</span></span><br><span class="line">        <span class="comment"># Realize uma passagem pelo array</span></span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>, n-i-<span class="number">1</span>):</span><br><span class="line">            <span class="keyword">if</span> arr[j] &gt; arr[j+<span class="number">1</span>]:</span><br><span class="line">                <span class="comment"># Troca se os elementos estiverem na ordem errada</span></span><br><span class="line">                arr[j], arr[j+<span class="number">1</span>] = arr[j+<span class="number">1</span>], arr[j]</span><br><span class="line">                swapped = <span class="literal">True</span></span><br><span class="line">        <span class="comment"># Se não houve trocas, significa que a lista está ordenada</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> swapped:</span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># Gera um array aleatório com números entre 1 e 1000</span></span><br><span class="line">    arr = [random.randint(<span class="number">1</span>, <span class="number">1000</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)]</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array original:&quot;</span>, arr)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Mede o tempo de execução do Bubble Sort</span></span><br><span class="line">    start_time = time.time()</span><br><span class="line">    sorted_arr = bubble_sort(arr)</span><br><span class="line">    end_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, sorted_arr)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tempo de execução: &#123;:.6f&#125; segundos&quot;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br></pre></td></tr></table></figure>
+
+<p> <strong>Desempenho do algoritmo em diferentes cenários:</strong></p>
+<p> O link segue para os testes realizados com bubble sort em 𝑂(n²).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/18/Sort/" data-id="clxjwz1k20005iss7bjs371nr" data-title="Bubble Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Binario" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/repositorioCalculo/2024/06/16/Binario/" class="article-date">
+  <time class="dt-published" datetime="2024-06-17T02:47:16.000Z" itemprop="datePublished">2024-06-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/repositorioCalculo/2024/06/16/Binario/">Busca Binária</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Algoritmo-Busca-Binaria"><a href="#Algoritmo-Busca-Binaria" class="headerlink" title="Algoritmo Busca Binária"></a>Algoritmo Busca Binária</h3><p>A busca binária é um algoritmo que funciona para encontrar um elemento em um array ordenado. Ele compara o elemento buscado com o elemento do meio do array e, dependendo da comparação, continua a busca na metade esquerda ou direita do array, reduzindo o intervalo de busca pela metade a cada iteração até localizar.</p>
+<p>Em ordem, o algoritmo segue os seguintes passos:</p>
+<p><strong>1.</strong> Inicia os limites de intervalos da busca.<br><strong>2.</strong> Enquanto o intervalo não estiver vazio, calcula o elemento do meio do array comparando-o com o elemento buscado, ajustando os limites de busca.<br><strong>3.</strong> Retorna o índice do elemento caso for encontrado, senão indica que o elemento é inexistente no array.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">busca_binaria</span>(<span class="params">arr, alvo</span>):</span><br><span class="line">    esquerda, direita = <span class="number">0</span>, <span class="built_in">len</span>(arr) - <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> esquerda &lt;= direita:</span><br><span class="line">        meio = (esquerda + direita) // <span class="number">2</span></span><br><span class="line">        <span class="comment"># Verifica se o alvo está no meio do array</span></span><br><span class="line">        <span class="keyword">if</span> arr[meio] == alvo:</span><br><span class="line">            <span class="keyword">return</span> meio</span><br><span class="line">        <span class="comment"># Se o alvo for menor que o elemento do meio, busca na metade esquerda do array</span></span><br><span class="line">        <span class="keyword">elif</span> arr[meio] &gt; alvo:</span><br><span class="line">            direita = meio - <span class="number">1</span></span><br><span class="line">        <span class="comment"># Se o alvo for maior que o elemento do meio, busca na metade direita do array</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            esquerda = meio + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># Retorna -1 se o elemento não for encontrado</span></span><br><span class="line">    <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Exemplo de uso</span></span><br><span class="line">arr = [<span class="number">5</span>, <span class="number">13</span>, <span class="number">22</span>, <span class="number">37</span>, <span class="number">50</span>, <span class="number">64</span>, <span class="number">78</span>, <span class="number">89</span>, <span class="number">99</span>]</span><br><span class="line">alvo = <span class="number">37</span></span><br><span class="line">resultado = busca_binaria(arr, alvo)</span><br><span class="line"><span class="keyword">if</span> resultado != -<span class="number">1</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Elemento encontrado no índice:&quot;</span>, resultado)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Elemento não encontrado no array.&quot;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/Binario/" data-id="clxjwz1jw0000iss7b97nfgg4" data-title="Busca Binária" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="post-Insertion" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/repositorioCalculo/2024/06/16/Insertion/" class="article-date">
+  <time class="dt-published" datetime="2024-06-17T02:47:16.000Z" itemprop="datePublished">2024-06-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/repositorioCalculo/2024/06/16/Insertion/">Insertion Sort</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id="Algoritmo-Insertion-Sort"><a href="#Algoritmo-Insertion-Sort" class="headerlink" title="Algoritmo Insertion Sort"></a>Algoritmo Insertion Sort</h3><p>O algoritmo de ordenação Insertion Sort funciona percorrendo um array, inserindo cada elemento na posição correta em relação aos demais ordenados, expandindo a porção de arrays.</p>
+<p>Em ordem, o algoritmo segue os seguintes passos:</p>
+<p><strong>1.</strong> Percorre por todo array.<br><strong>2.</strong> A cada elemento, ele compara com o elemento à esquerda em sua porção do array e insere na posição correta.</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="comment"># método insertion sort</span></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">insertion_sort</span>(<span class="params">arr</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>, n):</span><br><span class="line">        key = arr[i]</span><br><span class="line">        j = i - <span class="number">1</span></span><br><span class="line">        <span class="keyword">while</span> j &gt;= <span class="number">0</span> <span class="keyword">and</span> arr[j] &gt; key:</span><br><span class="line">            arr[j + <span class="number">1</span>] = arr[j]</span><br><span class="line">            j -= <span class="number">1</span></span><br><span class="line">        arr[j + <span class="number">1</span>] = key</span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># cria um array com números entre 1 e 1000</span></span><br><span class="line">    arr = [random.randint(<span class="number">1</span>, <span class="number">1000</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)]</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array original:&quot;</span>, arr)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># medição do tempo de execução do Insertion Sort</span></span><br><span class="line">    start_time = time.time()</span><br><span class="line">    sorted_arr = insertion_sort(arr)</span><br><span class="line">    end_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, sorted_arr)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tempo de execução: &#123;:.6f&#125; segundos&quot;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>Desempenho do algoritmo em diferentes cenários:</strong></p>
+<p> O link segue para os testes realizados com insertion sort em complexidade 𝑂(n²).</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/Insertion/" data-id="clxjwz1jz0001iss796av8q2c" data-title="Insertion Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-My-New-Post" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/repositorioCalculo/2024/06/16/My-New-Post/" class="article-date">
@@ -91,14 +377,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="Algoritmo-Selection-Sort"><a href="#Algoritmo-Selection-Sort" class="headerlink" title="Algoritmo Selection Sort"></a>Algoritmo Selection Sort</h3><p>O algoritmo de ordenação Selection Sort é um algoritmo simples que funciona dividindo o array em duas partes: a parte ordenada na frente e a parte não ordenada atrás. Inicialmente, a parte ordenada está vazia e a parte desordenada contém todos os elementos. Isso é, em cada iteração, o algoritmo busca o menor elemento desordenado e o realoca na parte ordenadau.</p>
-<p>Em orde, o algoritmo segue os seguintes passos:</p>
-<ol>
-<li>Percorre por todo array</li>
-<li>Encontra o menor elemento na parte não ordenada.</li>
-<li>Realiza a troca do menor elemento encontrado com o primeiro elemento não ordenado.</li>
-<li>Realiza uma repetição até que todo array esteja ordenado.</li>
-</ol>
+        <h3 id="Algoritmo-Selection-Sort"><a href="#Algoritmo-Selection-Sort" class="headerlink" title="Algoritmo Selection Sort"></a>Algoritmo Selection Sort</h3><p>O algoritmo de ordenação Selection Sort é um algoritmo simples que funciona dividindo o array em duas partes: a parte ordenada na frente e a parte não ordenada atrás. Inicialmente, a parte ordenada está vazia e a parte desordenada contém todos os elementos. Isso é, em cada iteração, o algoritmo busca o menor elemento desordenado e o realoca na parte ordenada.</p>
+<p>Em ordem, o algoritmo segue os seguintes passos:</p>
+<p><strong>1.</strong> Percorre por todo array<br><strong>2.</strong> Encontra o menor elemento na parte não ordenada.<br><strong>3.</strong> Realiza a troca do menor elemento encontrado com o primeiro elemento não ordenado.<br><strong>4.</strong> Realiza uma repetição até que todo array esteja ordenado.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">arr</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="comment"># Encontra o menor elemento na parte não ordenada</span></span><br><span class="line">        min_idx = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, n):</span><br><span class="line">            <span class="keyword">if</span> arr[j] &lt; arr[min_idx]:</span><br><span class="line">                min_idx = j</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Troca o menor elemento com o primeiro elemento não ordenado</span></span><br><span class="line">        arr[i], arr[min_idx] = arr[min_idx], arr[i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># Gera um array aleatório com números entre 1 e 1000</span></span><br><span class="line">    arr = [random.randint(<span class="number">1</span>, <span class="number">1000</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)]</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array original:&quot;</span>, arr)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Mede o tempo de execução do Selection Sort</span></span><br><span class="line">    start_time = time.time()</span><br><span class="line">    sorted_arr = selection_sort(arr)</span><br><span class="line">    end_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, sorted_arr)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tempo de execução: &#123;:.6f&#125; segundos&quot;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p><strong>Desempenho do algoritmo em diferentes cenários:</strong></p>
@@ -107,7 +388,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/My-New-Post/" data-id="clxidlsj100009ws78os10ahd" data-title="Selection Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/My-New-Post/" data-id="clxjwz1k10004iss7cgbgeav8" data-title="Selection Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -158,7 +439,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/05/14/hello-world/" data-id="clw5uhr9v00008os778lv3ogb" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/05/14/hello-world/" data-id="clxjwz1k20006iss7fjojh950" data-title="Hello World" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -201,11 +482,23 @@
       <ul>
         
           <li>
-            <a href="/repositorioCalculo/2024/06/16/My-New-Post/">Selection Sort</a>
+            <a href="/repositorioCalculo/2024/06/18/Comparacao/">Comparação de eficiência dos algoritmos</a>
           </li>
         
           <li>
-            <a href="/repositorioCalculo/2024/05/14/hello-world/">Hello World</a>
+            <a href="/repositorioCalculo/2024/06/18/Merge/">Merge Sort</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/18/Sort/">Bubble Sort</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/16/Binario/">Busca Binária</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/16/Insertion/">Insertion Sort</a>
           </li>
         
       </ul>

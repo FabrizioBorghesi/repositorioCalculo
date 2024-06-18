@@ -14,7 +14,7 @@
 <meta property="og:description" content="Algoritmo Selection SortO algoritmo de ordenação Selection Sort é um algoritmo simples que funciona dividindo o array em duas partes: a parte ordenada na frente e a parte não ordenada atrás. Inicialme">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2024-06-17T02:47:16.000Z">
-<meta property="article:modified_time" content="2024-06-17T20:43:43.734Z">
+<meta property="article:modified_time" content="2024-06-18T03:15:00.983Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -93,14 +93,9 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h3 id="Algoritmo-Selection-Sort"><a href="#Algoritmo-Selection-Sort" class="headerlink" title="Algoritmo Selection Sort"></a>Algoritmo Selection Sort</h3><p>O algoritmo de ordenação Selection Sort é um algoritmo simples que funciona dividindo o array em duas partes: a parte ordenada na frente e a parte não ordenada atrás. Inicialmente, a parte ordenada está vazia e a parte desordenada contém todos os elementos. Isso é, em cada iteração, o algoritmo busca o menor elemento desordenado e o realoca na parte ordenadau.</p>
-<p>Em orde, o algoritmo segue os seguintes passos:</p>
-<ol>
-<li>Percorre por todo array</li>
-<li>Encontra o menor elemento na parte não ordenada.</li>
-<li>Realiza a troca do menor elemento encontrado com o primeiro elemento não ordenado.</li>
-<li>Realiza uma repetição até que todo array esteja ordenado.</li>
-</ol>
+        <h3 id="Algoritmo-Selection-Sort"><a href="#Algoritmo-Selection-Sort" class="headerlink" title="Algoritmo Selection Sort"></a>Algoritmo Selection Sort</h3><p>O algoritmo de ordenação Selection Sort é um algoritmo simples que funciona dividindo o array em duas partes: a parte ordenada na frente e a parte não ordenada atrás. Inicialmente, a parte ordenada está vazia e a parte desordenada contém todos os elementos. Isso é, em cada iteração, o algoritmo busca o menor elemento desordenado e o realoca na parte ordenada.</p>
+<p>Em ordem, o algoritmo segue os seguintes passos:</p>
+<p><strong>1.</strong> Percorre por todo array<br><strong>2.</strong> Encontra o menor elemento na parte não ordenada.<br><strong>3.</strong> Realiza a troca do menor elemento encontrado com o primeiro elemento não ordenado.<br><strong>4.</strong> Realiza uma repetição até que todo array esteja ordenado.</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">selection_sort</span>(<span class="params">arr</span>):</span><br><span class="line">    n = <span class="built_in">len</span>(arr)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(n):</span><br><span class="line">        <span class="comment"># Encontra o menor elemento na parte não ordenada</span></span><br><span class="line">        min_idx = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> <span class="built_in">range</span>(i + <span class="number">1</span>, n):</span><br><span class="line">            <span class="keyword">if</span> arr[j] &lt; arr[min_idx]:</span><br><span class="line">                min_idx = j</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># Troca o menor elemento com o primeiro elemento não ordenado</span></span><br><span class="line">        arr[i], arr[min_idx] = arr[min_idx], arr[i]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> arr</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">&quot;__main__&quot;</span>:</span><br><span class="line">    <span class="comment"># Gera um array aleatório com números entre 1 e 1000</span></span><br><span class="line">    arr = [random.randint(<span class="number">1</span>, <span class="number">1000</span>) <span class="keyword">for</span> _ <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1000</span>)]</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array original:&quot;</span>, arr)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># Mede o tempo de execução do Selection Sort</span></span><br><span class="line">    start_time = time.time()</span><br><span class="line">    sorted_arr = selection_sort(arr)</span><br><span class="line">    end_time = time.time()</span><br><span class="line"></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Array ordenado:&quot;</span>, sorted_arr)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Tempo de execução: &#123;:.6f&#125; segundos&quot;</span>.<span class="built_in">format</span>(end_time - start_time))</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <p><strong>Desempenho do algoritmo em diferentes cenários:</strong></p>
@@ -109,7 +104,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/My-New-Post/" data-id="clxidlsj100009ws78os10ahd" data-title="Selection Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      <a data-url="https://fabrizioborghesi.github.io/repositorioCalculo/2024/06/16/My-New-Post/" data-id="clxjwz1k10004iss7cgbgeav8" data-title="Selection Sort" class="article-share-link"><span class="fa fa-share">Share</span></a>
       
       
       
@@ -118,6 +113,15 @@
   
     
 <nav id="article-nav">
+  
+    <a href="/repositorioCalculo/2024/06/16/Insertion/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Insertion Sort
+        
+      </div>
+    </a>
   
   
     <a href="/repositorioCalculo/2024/05/14/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
@@ -160,11 +164,23 @@
       <ul>
         
           <li>
-            <a href="/repositorioCalculo/2024/06/16/My-New-Post/">Selection Sort</a>
+            <a href="/repositorioCalculo/2024/06/18/Comparacao/">Comparação de eficiência dos algoritmos</a>
           </li>
         
           <li>
-            <a href="/repositorioCalculo/2024/05/14/hello-world/">Hello World</a>
+            <a href="/repositorioCalculo/2024/06/18/Merge/">Merge Sort</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/18/Sort/">Bubble Sort</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/16/Binario/">Busca Binária</a>
+          </li>
+        
+          <li>
+            <a href="/repositorioCalculo/2024/06/16/Insertion/">Insertion Sort</a>
           </li>
         
       </ul>
